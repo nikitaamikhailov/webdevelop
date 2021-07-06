@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE portfolio SYSTEM "AnastasiaTsarulkova">
+<portfolio>
+    <my_competencies>
+        <competency name="HTML" level="beginner+"/>
+        <competency name="CSS" level="beginner+"/>
+        <competency name="JS" level="beginner+"/>
+        <competency name="XML" level="beginner"/>
+        <competency name="CORS" level="beginner"/>
+        <competency name="DOM" level="beginner"/>
+    </my_competencies>
+</portfolio>
