@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Форма с валидацией</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen'>
+    
+</head>
+<body>
+    <form>
+        <h3>Формочка</h3>
+        <label id="loginLabel">Login:
+            <input type="text" id="login" >
+        </label>
+        <br>
+        <label id="passwordLabel">Password:
+            <input type="password" id="password">
+        </label>
+        <br>
+        <button type="submit">Проверка</button>
+    </form>
+    <script>{
+        const login = document.getElementById('login');
+        const password = document.getElementById('password');
+        const loginLabel = document.getElementById('loginLabel');
+        const passwordLabel = document.getElementById('passwordLabel');
+        const form = document.querySelector('form');
+        
+        function check() {
+            const loginValue = login.value;
+            if (loginValue == '') {
+                login.style.borderColor = 'red';
+                alert('Нужно ввести логин');
+            } else if (!loginValue.match(/^[a-zA-Z0-9@.]*$/i)) {
+                login.style.borderColor = 'red';
+                alert('Некорректные символы логина');
+            } else {
+                login.style.borderColor = 'white';
+                alert('Крутяк');
+            }
+            event.preventDefault();
+    
+            const passwordValue = password.value;
+            if (passwordValue == '') {
+                password.style.borderColor = 'red';
+                alert('Нужно ввести пароль');
+            } else if (!passwordValue.match(/^[a-zA-Z0-9]*$/i) || (passwordValue.length < 6)) {
+                password.style.borderColor = 'red';
+                alert('Некорректно введен пароль');
+            } else {
+                password.style.borderColor = 'white';
+                alert('Красота');
+            }
+            event.preventDefault();
+        }
+        form.addEventListener('submit',check);
+    }
+    </script>
+</body>
+</html> 

@@ -1,0 +1,231 @@
+ 
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The Root Schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "additionalProperties": true,
+    "required": [
+        "students"
+    ],
+    "properties": {
+        "students": {
+            "$id": "#/properties/students",
+            "type": "object",
+            "title": "The Students Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+                {
+                    "Petrov": {
+                        "Graphics": "5",
+                        "Web-design": "4",
+                        "Logics": "5",
+                        "Multimedia": "3"
+                    },
+                    "Sidorenko": {
+                        "Web-design": "4",
+                        "Logics": "5",
+                        "Multimedia": "3",
+                        "Graphics": "5"
+                    },
+                    "Ivanov": {
+                        "Web-design": "3",
+                        "Multimedia": "3",
+                        "Graphics": "5"
+                    }
+                }
+            ],
+            "additionalProperties": true,
+            "required": [
+                "Ivanov",
+                "Petrov",
+                "Sidorenko"
+            ],
+            "properties": {
+                "Ivanov": {
+                    "$id": "#/properties/students/properties/Ivanov",
+                    "type": "object",
+                    "title": "The Ivanov Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": {},
+                    "examples": [
+                        {
+                            "Web-design": "3",
+                            "Multimedia": "3",
+                            "Graphics": "5"
+                        }
+                    ],
+                    "additionalProperties": true,
+                    "required": [
+                        "Multimedia",
+                        "Web-design",
+                        "Graphics"
+                    ],
+                    "properties": {
+                        "Multimedia": {
+                            "$id": "#/properties/students/properties/Ivanov/properties/Multimedia",
+                            "type": "string",
+                            "title": "The Multimedia Schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": "",
+                            "examples": [
+                                "3"
+                            ]
+                        },
+                        "Web-design": {
+                            "$id": "#/properties/students/properties/Ivanov/properties/Web-design",
+                            "type": "string",
+                            "title": "The Web-design Schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": "",
+                            "examples": [
+                                "3"
+                            ]
+                        },
+                        "Graphics": {
+                            "$id": "#/properties/students/properties/Ivanov/properties/Graphics",
+                            "type": "string",
+                            "title": "The Graphics Schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": "",
+                            "examples": [
+                                "5"
+                            ]
+                        }
+                    }
+                },
+                "Petrov": {
+                    "$id": "#/properties/students/properties/Petrov",
+                    "type": "object",
+                    "title": "The Petrov Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": {},
+                    "examples": [
+                        {
+                            "Web-design": "4",
+                            "Logics": "5",
+                            "Multimedia": "3",
+                            "Graphics": "5"
+                        }
+                    ],
+                    "additionalProperties": true,
+                    "required": [
+                        "Multimedia",
+                        "Web-design",
+                        "Graphics",
+                        "Logics"
+                    ],
+                    "properties": {
+                        "Multimedia": {
+                            "$id": "#/properties/students/properties/Petrov/properties/Multimedia",
+                            "type": "string",
+                            "title": "The Multimedia Schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": "",
+                            "examples": [
+                                "3"
+                            ]
+                        },
+                        "Web-design": {
+                            "$id": "#/properties/students/properties/Petrov/properties/Web-design",
+                            "type": "string",
+                            "title": "The Web-design Schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": "",
+                            "examples": [
+                                "4"
+                            ]
+                        },
+                        "Graphics": {
+                            "$id": "#/properties/students/properties/Petrov/properties/Graphics",
+                            "type": "string",
+                            "title": "The Graphics Schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": "",
+                            "examples": [
+                                "5"
+                            ]
+                        },
+                        "Logics": {
+                            "$id": "#/properties/students/properties/Petrov/properties/Logics",
+                            "type": "string",
+                            "title": "The Logics Schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": "",
+                            "examples": [
+                                "5"
+                            ]
+                        }
+                    }
+                },
+                "Sidorenko": {
+                    "$id": "#/properties/students/properties/Sidorenko",
+                    "type": "object",
+                    "title": "The Sidorenko Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": {},
+                    "examples": [
+                        {
+                            "Graphics": "5",
+                            "Web-design": "4",
+                            "Logics": "5",
+                            "Multimedia": "3"
+                        }
+                    ],
+                    "additionalProperties": true,
+                    "required": [
+                        "Multimedia",
+                        "Web-design",
+                        "Graphics",
+                        "Logics"
+                    ],
+                    "properties": {
+                        "Multimedia": {
+                            "$id": "#/properties/students/properties/Sidorenko/properties/Multimedia",
+                            "type": "string",
+                            "title": "The Multimedia Schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": "",
+                            "examples": [
+                                "3"
+                            ]
+                        },
+                        "Web-design": {
+                            "$id": "#/properties/students/properties/Sidorenko/properties/Web-design",
+                            "type": "string",
+                            "title": "The Web-design Schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": "",
+                            "examples": [
+                                "4"
+                            ]
+                        },
+                        "Graphics": {
+                            "$id": "#/properties/students/properties/Sidorenko/properties/Graphics",
+                            "type": "string",
+                            "title": "The Graphics Schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": "",
+                            "examples": [
+                                "5"
+                            ]
+                        },
+                        "Logics": {
+                            "$id": "#/properties/students/properties/Sidorenko/properties/Logics",
+                            "type": "string",
+                            "title": "The Logics Schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": "",
+                            "examples": [
+                                "5"
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

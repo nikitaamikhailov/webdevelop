@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head><style>h1 {color:green}; 
+    #t1 { 
+        font-size: 14px;
+        border-collapse: collapse;
+        text-align: center; 
+    } 
+    th, td:first-child {
+        background: #AFCDE7;
+        color: black;
+        padding: 10px 20px;
+    }
+    th, td {
+        border-style: solid;
+        border-width: 0 1px 1px 0;
+        border-color: white;
+    }
+    td {
+        background: #D8E6F3;
+    }
+    th:first-child, td:first-child {
+        text-align: left;
+    } </style>
+  <title>Валюты</title><meta charset="utf-8"></head>
+ <body>
+    <h4 id="author" title="GossJS">Царулкова Анастасия</h4>
+    <h1>Валюты</h1>
+    <pre></pre>
+    <script>{
+         fetch('https://kodaktor.ru/j/rates').then( x  => x.json())
+         .then(x=>{
+           	 const t = document.createElement('table');
+           	 t.setAttribute('id','t1');
+           	 document.querySelector('body').appendChild(t);
+           
+           for(i = 1; i<7; i++){
+           	 const trtemp = document.createElement('tr');
+           	 document.getElementById('t1').appendChild(trtemp);
+             trtemp.setAttribute('id', `tr${i}`);                     
+           }
+           
+        
+             let td1 = document.createElement('td');
+             document.getElementById('tr1').appendChild(td1);
+             td1.textContent = 'Валюта';
+             let td2 = document.createElement('td');
+             document.getElementById('tr1').appendChild(td2);
+             td2.textContent = 'Продажа';
+             let td3 = document.createElement('td');
+             document.getElementById('tr1').appendChild(td3);
+             td3.textContent = 'Покупка';
+             
+          
+           	
+             
+        
+             let cnt = 2;
+             x.forEach(current=>{
+               let tdtemp1 = document.createElement('td');
+               td1 = document.getElementById(`tr${cnt}`).appendChild(tdtemp1);
+               td1.textContent = `${current.name}`;
+               let tdtemp2 = document.createElement('td');
+               td2 = document.getElementById(`tr${cnt}`).appendChild(tdtemp2);
+               td2.textContent = `${current.sell}`;
+               let tdtemp3 = document.createElement('td');
+               td3 = document.getElementById(`tr${cnt}`).appendChild(tdtemp3);
+               td3.textContent = `${current.buy}`; 
+               cnt+=1;
+            });
+           
+         });
+}</script>
+ </body>
+</html>

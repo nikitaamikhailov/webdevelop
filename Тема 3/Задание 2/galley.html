@@ -1,0 +1,50 @@
+ 
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Страница HTML5</title><meta charset="utf-8">
+ </head>
+ <body>
+  <h4 id="author" title="GossJS">Царулкова Анастасия</h4>
+  <script>{
+  function cacheIm(url){
+  	const im = document.createElement('img');
+    im.src = url;
+    im.width = '150';
+    im.onclick = function() { im.style = 'border: 15px solid red';
+    }
+    return im;
+  };
+	 
+
+  img_urls = ['https://cdn.pixabay.com/photo/2020/04/18/09/39/poppy-5058494_960_720.jpg','https://cdn.pixabay.com/photo/2020/04/02/10/00/record-player-4994400_960_720.jpg','https://cdn.pixabay.com/photo/2020/04/27/09/21/cat-5098930_960_720.jpg'];
+  
+  const load_button = document.createElement('button');
+  document.body.appendChild(load_button);
+  load_button.textContent += 'Load Image';
+  load_button.id = 'load';
+  
+  const my_handler2 = function() {
+document.body.appendChild(cacheIm('https://cdn.pixabay.com/photo/2019/09/16/14/45/meerkat-4481185_960_720.jpg'));
+    elem = document.getElementById('insert');
+    document.body.removeChild(elem);
+  };
+  
+  const my_handler = function() { 
+    img_urls.forEach(cur=>{
+  	document.body.appendChild(cacheIm(cur));
+    });
+    elem = document.getElementById('load');
+    insert_button.addEventListener('click', my_handler2);
+    document.body.removeChild(elem);  
+  };
+  load_button.addEventListener('click', my_handler); 
+  
+  const insert_button = document.createElement('button');
+  document.body.appendChild(insert_button);
+  insert_button.textContent += 'Insert Image';
+  insert_button.id = 'insert'; 
+  
+}</script>
+ </body>
+</html>

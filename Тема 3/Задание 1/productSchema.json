@@ -1,0 +1,25 @@
+{
+	"type": "array",
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"description": "",
+	"minItems": 1,
+	"uniqueItems": true,
+	"items": {
+		"type": "object",
+		"required": ["name", "sell", "buy"],
+		"properties": {
+			"name": {
+				"type": "string",
+				"minLength": 1
+			},
+			"sell": {
+				"type": "string",
+				"minLength": 1
+			},
+			"buy": {
+				"type": "string",
+				"minLength": 1
+			}
+		}
+	}
+} 

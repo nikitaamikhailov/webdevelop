@@ -1,0 +1,23 @@
+https://kodaktor.ru/?!=my_c1e61
+
+{
+    "students": {
+      "Ivanov": {
+        "Multimedia" : "3",
+        "Web-design" : "3",
+        "Graphics" : "5"
+      },
+      "Petrov": {
+        "Multimedia" : "3",
+        "Web-design" : "4",
+        "Graphics" : "5",
+        "Logics" : "5"
+      },
+      "Sidorenko": {
+        "Multimedia" : "3",
+        "Web-design" : "4",
+        "Graphics" : "5",
+        "Logics" : "5"
+      }
+    }
+  }
