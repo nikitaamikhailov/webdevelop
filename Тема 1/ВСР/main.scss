@@ -1,0 +1,26 @@
+$bg-color: rgb(209, 136, 136);
+$font-name: Helvetica, sans-serif;
+$post-color: rgb(255, 225, 225);
+body {
+    background-color: $bg-color;
+    font: $font-name;
+}
+
+div {
+   
+    text-align: center;
+    background-color: $post-color;
+    
+}
+
+.post {
+    h2 {
+     text-decoration: wavy;   
+    }
+    
+    border-radius: 5px; 
+}
+
+.comment{
+    border-radius: 10px; 
+}
