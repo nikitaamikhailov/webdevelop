@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:simpleType name="границы_отмет">
+  <xs:restriction base="xs:integer">
+    <xs:minInclusive value="2"/>
+    <xs:maxInclusive value="5"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="отметочка">
+  <xs:restriction base="xs:string">
+   <xs:pattern value="Мультимедиа|Веб-дизайн|Графика|Логика"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="имяст">
+  <xs:restriction base="xs:string">
+    <xs:maxLength value="32"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:attribute name="имя" type="имяст"/>
+
+<xs:complexType name="отмет">
+ <xs:simpleContent>
+  <xs:extension base="границы_отмет">
+   <xs:attribute ref="отметочка" use="required"/>
+  </xs:extension>
+ </xs:simpleContent>
+</xs:complexType>
+
+<xs:element name="отметка" type="отмет"/>
+
+<xs:complexType name="студ">
+  <xs:sequence>
+    <xs:element ref="отметка" minOccurs="1" maxOccurs="unbounded"/>
+  </xs:sequence>
+  <xs:attribute ref="имя" use="required"/>
+</xs:complexType>
+
+<xs:element name="студент" type="студ"/>
+
+</xs:schema>
