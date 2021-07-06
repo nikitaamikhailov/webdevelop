@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE stats PUBLIC "AnastasiaTsarulkova" "https://kodaktor.ru/?!=dtd_ad79a">
+<stats>
+    <ips>
+        <ip addr="077.234.203.101" frequency="12"/>
+        <ip addr="005.144.096.251" frequency="11"/>
+        <ip addr="094.019.018.060" frequency="4"/>
+        <ip addr="178.069.049.121" frequency="3"/>
+        <ip addr="005.016.096.109" frequency="3"/>
+    </ips>
+    <oss>
+        <os name="Windows" frequency="87"/>
+        <os name="Linux" frequency="8"/>
+        <os name="Macintosh" frequency="18"/>
+    </oss>
+    <moss>
+        <mos name="Android" frequency="10"/>
+        <mos name="iPhone" frequency="5"/>
+    </moss>
+</stats>
