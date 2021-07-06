@@ -1,0 +1,13 @@
+<!ELEMENT stats (ips,oss,moss+)>
+<!ELEMENT ips (ip+)>
+<!ELEMENT oss (os+)>
+<!ELEMENT moss (mos+)>
+<!ELEMENT ip EMPTY>
+<!ELEMENT os EMPTY>
+<!ELEMENT mos EMPTY >
+<!ATTLIST ip name CDATA #REQUIRED>
+<!ATTLIST ip frequency CDATA #REQUIRED>
+<!ATTLIST os name (Windows|Linux|MacOS)) #REQUIRED>
+<!ATTLIST os frequency CDATA #REQUIRED>
+<!ATTLIST mos name CDATA #REQUIRED>
+<!ATTLIST mos frequency CDATA #REQUIRED>
