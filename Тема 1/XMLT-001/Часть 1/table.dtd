@@ -1,0 +1,5 @@
+<!ELEMENT таблица (студент+)>
+<!ELEMENT студент (отметка+)>
+<!ELEMENT отметка (#PCDATA)>
+<!ATTLIST студент имя CDATA #REQUIRED>
+<!ATTLIST отметка дисциплина CDATA #REQUIRED>
