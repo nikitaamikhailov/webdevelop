@@ -1,0 +1,5 @@
+<!ELEMENT portfolio (my_competencies)>
+<!ELEMENT my_competencies (competency+)>
+<!ELEMENT competency EMPTY>
+<!ATTLIST competency name CDATA #REQUIRED>
+<!ATTLIST competency level CDATA #REQUIRED>
