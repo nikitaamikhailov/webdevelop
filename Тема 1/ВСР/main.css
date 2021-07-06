@@ -1,0 +1,20 @@
+body {
+  background-color: #d18888;
+  font: Helvetica, sans-serif;
+}
+
+div {
+  text-align: center;
+  background-color: #ffe1e1;
+}
+
+.post {
+  border-radius: 5px;
+}
+.post h2 {
+  text-decoration: wavy;
+}
+
+.comment {
+  border-radius: 10px;
+}
