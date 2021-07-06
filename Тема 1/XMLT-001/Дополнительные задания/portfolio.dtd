@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE портфолио PUBLIC>
+<!ELEMENT информацияПрофиля (фио, возраст, описание, фото)>
+<!ELEMENT фио (#PCDATA)>
+<!ELEMENT возраст (#PCDATA)>
+<!ELEMENT описание (#PCDATA)>
+<!ELEMENT фото ANY>
+<!ELEMENT достижение (названиеДостижения, описание, фото*)>
+<!ELEMENT название (#PCDATA)>
+<!ELEMENT описание (#PCDATA)>
+<!ELEMENT фото ANY>
+<!ELEMENT мероприятие (названиеМероприятия, фото*)>
+<!ELEMENT названиеМероприятия (#PCDATA)>
+<!ATTLIST достижение дата CDATA #REQUIRED>
+<!ATTLIST мероприятие дата CDATA #REQUIRED>
